@@ -1,0 +1,442 @@
+/* --- Start CSS stlying for home page --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style:none;
+}
+::selection {
+  background: #313131; /* tum apna color choose karo */
+  color: #ffffff;      /* selected text ka color */
+}
+
+/* --- Start Main CSS --- */
+html, body {
+    width: 100%;
+    height: 100%;  /* use full viewport */
+    margin: 0;     /* prevent default spacing */
+    overflow: hidden; /* disable body scroll */
+}
+
+main {
+    width: 100%;
+    height: 100%; 
+    overflow-x:hidden;
+    overflow-y: auto;  /* scroll only when needed */
+    position: relative;
+}
+
+header{
+     background-color: #313131;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 10px 20px;
+     font-size: .9rem;
+     font-weight: 400;
+}
+header a, header span{
+    padding-right:.5rem;
+    color: #FFFF;
+}
+header span{
+    font-size: .6rem;
+}
+header a{
+    padding-right: 2rem;
+}
+header a:hover{
+    position: relative;
+}
+header .phone_icon{
+    position: relative;
+    top:.3rem;
+    rotate:95deg;
+}
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 0;
+  height: 3px; /* underline thickness */
+  background: linear-gradient(to right, #313131, #cccccc); /* gradient underline */
+  transition: width 0.4s ease; 
+  border-radius: 2px; /* smooth rounded underline */
+}
+
+header a:hover::after {
+  width:80%; /* underline expands left to right */
+}
+
+/* --- End Header CSS --- */
+
+/* --- Start Nav CSS --- */
+
+nav{
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    height:15vh;
+    display:flex;
+    background-color:#FFFF;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index:999;
+}
+nav .left{
+    width:12%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+nav .left img{
+    width:6.5rem;
+    border-radius:.5rem;
+    margin-top:.3rem;
+}
+nav .mid{
+    width:75%;
+    height:65%;
+    background:#313131;
+    margin-top:.9rem;
+    border-radius:2rem;
+}
+.drop_arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dropdown_box{
+        position:fixed;
+        left: 50%;
+        top:20%;
+        transform:translateX(-50%);
+        width:95vw;
+        height:58vh;
+        border-radius: 10px;
+        background-color:#fff;
+        padding:0 1.3rem;
+        box-shadow: 0px 5px 8px #ccc;
+        display:none;
+        z-index: 99;
+    }
+    .dropdown_box_hidden{
+        display:block;
+    }
+    .dropdown_box .dropdown_row{
+        width: 100%;
+        height:32%;
+        display:flex;
+        justify-content:space-between;
+        padding-top: 2rem;
+    }
+    .dropdown_box .dropdown_column{
+        width: 48%;
+        height:100%;
+        border-radius:10px;
+        display:flex;
+        flex-direction:column;
+        align-items:space-between ;
+        justify-content:center;
+        padding-left:1rem;
+        padding-top:.3rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+    .scnd_dropdown_box{
+        height:65vh;
+    }
+    .dropdown_box .dropdown_column:hover{
+        background-color:#313131;
+        color: #ffff;
+    }
+    .dropdown_box .dropdown_column:hover a{
+        color: #ffff;
+    }
+    .dropdown_box .dropdown_column a{
+        color: #000;;
+    }
+    .dropdown_box .dropdown_column h3{
+        padding:.5rem;
+        line-height:1rem;
+        word-spacing: .2rem;
+        letter-spacing:.055rem;
+        font-weight:600;
+    }
+    .dropdown_box .dropdown_column p{
+     font-size:.88rem; 
+     padding:.5rem;
+     padding-top: 0;
+    }
+nav .mid ul{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+nav .mid ul li a{
+    position: relative;
+    color:#ffff;
+    padding:4px 0;
+}
+nav .mid ul li .active::after{
+    width:100%;
+}
+nav .mid ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 0;
+  height: 3px; /* underline thickness */
+  background: linear-gradient(to right, #313131, #cccccc); /* gradient underline */
+  transition: width 0.4s ease; 
+  border-radius: 2px; /* smooth rounded underline */
+}
+
+nav .mid ul li a:hover::after {
+  width: 100%; /* underline expands left to right */
+}
+nav .right{
+    width:17%;
+    height:70%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:.83rem;
+}
+nav .right button{
+    height:80%;
+    background: #9d0505;
+    color:#ffff;
+    border:none;
+    padding:12px 28px;
+    cursor: pointer;
+    font-size:16px;
+    border-radius:1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+}
+nav .right button a{
+    color:#FFFF;
+    position: relative;
+}
+nav .right button a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6%; 
+  width: 0;
+  height: 3px; /* underline thickness */
+  background: linear-gradient(to right, #9d0505, #cccccc); /* gradient underline */
+  transition: width 0.4s ease; 
+  border-radius: 2px; /* smooth rounded underline */
+}
+
+nav .right button a:hover::after {
+  width: 100%; /* underline expands left to right */
+}
+
+/* --- End Nav CSS --- */
+
+/* --- Start Section1 CSS --- */
+
+.section1{
+    width:100%;
+    height:85vh;
+    display: flex;
+}
+.section1 .left{
+    width:50%;
+    height:100%;
+    padding:5rem;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+.section1 .left h3{
+    word-spacing:.05rem;
+    letter-spacing:.03rem;
+    padding-bottom:1.5rem;
+    position: relative;
+    margin-bottom:.5rem;
+    font-weight:600;
+    font-size:1.9rem;
+}
+.section1 .left .about_line{
+    position: absolute;
+    content: " ";
+    width:7rem;
+    height:.15rem;
+    background:#313131;
+    bottom:20%;
+}
+.section1 .left p{
+    word-spacing:.03rem;
+    letter-spacing:.03rem;
+    line-height:1.5rem;
+    font-size:.9rem;
+    padding-bottom:.5rem;
+    text-align:justify;   
+}
+.section1 .right{
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.section1 .right img{
+    width:60%;
+}
+
+/* --- End Section1 CSS --- */
+
+    /* --- Start Footer CSS --- */
+
+    footer{
+        width:100%;
+        height:70vh;
+    }
+    footer .info{
+        width: 100%;
+        height:80%;
+        border-top:.225rem solid #313131;
+        border-bottom:.225rem solid #313131;
+        display:flex;
+    }
+    footer .info .left{
+        width:40vw;
+        height:100%;
+        padding:1.5rem;
+    }
+    footer .info .left img{
+        width:6.3rem;
+        margin-bottom:1.8rem;
+        cursor: pointer;
+    }
+    footer .info .left p{
+        font-size:.8rem;
+        letter-spacing: .05rem;
+    }
+    footer .info .middle{
+        width:40vw;
+        height:100%;
+        padding:1.5rem;
+    }
+    footer .info .middle h5{
+        font-size: 1.3rem;
+        font-weight:500;
+        text-transform:uppercase;
+        letter-spacing:.02rem;
+        padding-bottom: 1rem;
+    }
+    footer .info .middle li{
+        margin-top: .6rem;
+        font-weight: 500;
+        font-size:.85rem;
+        padding:.2rem 0;
+    }
+    footer .info .middle li a{
+        text-decoration: none;
+        color:#000;
+    }
+    footer .info .right{
+        width:40vw;
+        height:100%;
+        padding:1.5rem;
+    }
+    footer .info .right .contact_info_box{
+        width:100%;
+        height:90%;
+        display:flex;
+    }
+    footer .info .right .contact_info_box .contact_info_box_left{
+        width:10%;
+        height:100%;
+        padding-top:1rem;
+    }
+    footer .info .right .contact_info_box .contact_info_box_left .phone_icon{
+        margin-top:6.3rem;
+        transform:rotate(90deg);
+    }
+    footer .info .right .contact_info_box .contact_info_box_left .mail_icon{
+        margin-top:.4rem;
+    }
+    footer .info .right .contact_info_box .contact_info_box_right{
+        width:90%;
+        height:100%;
+    }
+    footer .info .right h5{
+        font-size: 1.5rem;
+        font-weight:500;
+        text-transform:uppercase;
+        letter-spacing:.02rem;
+        padding-bottom: 1rem;
+    }
+    footer .info .right li{
+        margin-top: .6rem;
+        font-weight: 500;
+        font-size:.85rem;
+        padding:.2rem 0;
+    }
+    footer .info .right li a{
+        text-decoration: none;
+        color:#000;
+    }
+    footer .manage{
+        width: 100%;
+        height:20%;
+        padding:1rem 1.5rem;
+        display:flex;
+    }
+    footer .manage .left{
+        width:50%;
+        height:100%;
+    }
+    footer .manage .left i{
+        font-size:1.5rem;
+        padding-right:1.5rem;
+        color: #000;
+    }
+    footer .manage .left .ri-linkedin-box-fill:hover{
+        color: #0A66C2;
+    }
+    footer .manage .left .ri-facebook-circle-fill:hover{
+        color: #1877F2;
+    }
+    footer .manage .left .ri-youtube-fill:hover{
+        color: #FF0000;
+    }
+    footer .manage .left .ri-instagram-line:hover{
+        color: #E1306C;
+    }
+    footer .manage .right{
+        width:70%;
+        height:100%;
+    }
+    footer .manage .right h6{
+        font-size:1rem;
+        font-weight:400;
+        float:right;
+    }
+    footer .manage .right h6 .span1{
+        font-weight:600;
+    }
+    footer .manage .right h6 .span2{
+        color:rgb(202, 30, 122);
+        font-weight:600;
+        cursor: pointer;
+    }
+    /* --- End Footer CSS --- */
+
+/* --- End Main CSS --- */
+
+/* --- End CSS stlying for home page --- */
