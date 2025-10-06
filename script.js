@@ -1,6 +1,7 @@
 // Start Home Scipting **------------
 
     // creating variable **------------
+    var loader = document.querySelector('.loader');
 
     // nav items
     var cfodropdownbox = document.querySelector(".fst_dropdown_box");
@@ -36,6 +37,12 @@
     // Get all necessary elements
     const dropdown1 = document.querySelector(".dropdown1");
     const dropdown2 = document.querySelector(".dropdown2");
+
+    (function loaderAnimation(){
+        setTimeout(function(){
+            loader.style.top = '-100%';
+        }, 5000)
+    })();
 
     (function toggleDropdown1(){
 
@@ -383,7 +390,7 @@
 
         // array keeps data dynamic
         const services = [
-            "https://cfocraft.com/wp-content/uploads/2023/05/wepik-export-20230508104346Alkd-min.png",
+            "https://media.istockphoto.com/id/1402430796/photo/blue-money-business-graph-finance-chart-diagram-on-economy-3d-coin-background-with-growth.webp?a=1&b=1&s=612x612&w=0&k=20&c=gD4u7W06rOv5JzQfBPAuIbFxFIJ6Z2v851LWZdHmNRY=",
             "Cash Management and Funding",
             "Financial stress in a startup comes from many directions. Managing cash, fundraising, meeting projections, finding the right pricing framework all contribute."
         ];
