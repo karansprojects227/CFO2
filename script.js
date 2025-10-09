@@ -41,7 +41,7 @@
     (function loaderAnimation(){
         setTimeout(function(){
             loader.style.top = '-100%';
-        }, 5000)
+        }, 6000)
     })();
 
     (function toggleDropdown1(){

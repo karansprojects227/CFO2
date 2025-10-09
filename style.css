@@ -302,7 +302,7 @@ nav .right button{
     font-size:16px;
     border-radius:2rem;
     transition: background 0.3s ease, color 0.3s ease;
-    background-color:#de4747;
+    background-color:#ca0b0b;
     box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
     position: relative;
     overflow: hidden;
@@ -354,7 +354,8 @@ nav .right button:hover a {
         font-size:1.8rem;
     }
     .section1 .left .offer{
-        color:#9d0505;
+        /* color:#9d0505; */
+        color:#ca0b0b;
         padding-top:.3rem;
         padding-bottom: 1.5rem;
     }
@@ -366,34 +367,34 @@ nav .right button:hover a {
          padding-bottom: 2.2rem;
     }
     .section1 .left .btn_1{
-        
-    position: relative;
-    background-color:#9d0505;
-    backdrop-filter:blur(10px);
-    border:none;
-    padding:12px 28px;
-    cursor: pointer;
-    font-size:16px;
-    border-radius:2rem;
-    transition: background 0.3s ease, color 0.3s ease;
-    box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
-    overflow: hidden;
+        margin-right:1vw;
+        position: relative;
+        background-color:#ca0b0b;
+        backdrop-filter:blur(10px);
+        border:none;
+        padding:12px 28px;
+        cursor: pointer;
+        font-size:16px;
+        border-radius:2rem;
+        transition: background 0.3s ease, color 0.3s ease;
+        box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+        overflow: hidden;
     }
     .section1 .left .btn_1 a{
         color:#FFFF;
-    position: relative;
-    z-index:2;
+        position: relative;
+        z-index:2;
     }
     .section1 .left .btn_1::after {
-      content: "";
-  position: absolute;
-  bottom:-100%;
-  left:0%; 
-  width:100%;
-  height:100%;
-  border-radius:1rem;
-  background: #FFFF; /* gradient underline */
-  transition:all 0.5s ease;
+        content: "";
+        position: absolute;
+        bottom:-100%;
+        left:0%; 
+        width:100%;
+        height:100%;
+        border-radius:1rem;
+        background: #FFFF; /* gradient underline */
+        transition:all 0.5s ease;
     }
 
     .section1 .left .btn_1:hover::after {
@@ -402,43 +403,44 @@ nav .right button:hover a {
     .section1 .left .btn_1:hover a {
       color: #000;
     }
+
     .section1 .left .btn_2{
-        border: none;
-        outline: none;
-        padding: 1rem 1.5rem;
-        font-weight: 500;
-        font-size:1rem;
-        background-color: transparent;
-        margin-left: 2rem;
+        position: relative;
+        background-color:#ca0b0b;
+        backdrop-filter:blur(10px);
+        border:none;
+        padding:12px 28px;
         cursor: pointer;
+        font-size:16px;
+        border-radius:2rem;
         transition: background 0.3s ease, color 0.3s ease;
         box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
-    }
-    .section1 .left .btn_2:hover{
-        background:#313131;
-        border-radius:10px;
+        overflow: hidden;
     }
     .section1 .left .btn_2 a{
-        position: relative;
-        color:#000;
-    }
-    .section1 .left .btn_2:hover a{
         color:#FFFF;
+        position: relative;
+        z-index:2;
     }
-    .section1 .left .btn_2 a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6%; 
-      width: 0;
-      height: 3px; /* underline thickness */
-      background: linear-gradient(to right, #313131, #cccccc); /* gradient underline */
-      transition: width 0.4s ease; 
-      border-radius: 2px; /* smooth rounded underline */
+    .section1 .left .btn_2::after {
+        content: "";
+        position: absolute;
+        bottom:-100%;
+        left:0%; 
+        width:100%;
+        height:100%;
+        border-radius:1rem;
+        background: #FFFF; /* gradient underline */
+        transition:all 0.5s ease;
     }
-    .section1 .left .btn_2 a:hover::after {
-      width: 100%; /* underline expands left to right */
+
+    .section1 .left .btn_2:hover::after {
+      bottom:0; /* underline expands left to right */
     }
+    .section1 .left .btn_2:hover a {
+      color: #000;
+    }
+    
     .section1 .right{
         width:40%;
         height: 100%;
@@ -507,46 +509,40 @@ nav .right button:hover a {
         padding-bottom: 2.2rem;
     }
     .section2 .about_cfo button{
-        border: none;
-        outline: none;
-        border:1px solid #313131;
-        padding: 1rem 2rem;
-        font-weight: 500;
-        font-size:1rem;
-        color: #313131;
-        background-color:transparent;
+        position: relative;
+        background-color:#ca0b0b;
+        backdrop-filter:blur(10px);
+        border:none;
+        padding:12px 28px;
         cursor: pointer;
+        font-size:16px;
+        border-radius:2rem;
         transition: background 0.3s ease, color 0.3s ease;
         box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
-    }
-    .section2 .about_cfo button:hover{
-        border:none;
-        background:#313131;
-        border-radius:10px;
-    }
-    .section2 .about_cfo button:hover a{
-        color:#fff;
+        overflow: hidden;
     }
     .section2 .about_cfo button a{
-        position: relative;
-        color:#000;
-    }
-    .section2 .about_cfo button a:hover{
         color:#FFFF;
+        position: relative;
+        z-index:2;
     }
-    .section2 .about_cfo button a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6%; 
-      width: 0;
-      height: 3px; /* underline thickness */
-      background: linear-gradient(to right, #313131, #cccccc); /* gradient underline */
-      transition: width 0.4s ease; 
-      border-radius: 2px; /* smooth rounded underline */
+    .section2 .about_cfo button::after {
+        content: "";
+        position: absolute;
+        bottom:-100%;
+        left:0%; 
+        width:100%;
+        height:100%;
+        border-radius:1rem;
+        background: #FFFF; /* gradient underline */
+        transition:all 0.5s ease;
     }
-    .section2 .about_cfo button a:hover::after {
-      width: 100%; /* underline expands left to right */
+
+    .section2 .about_cfo button:hover::after {
+      bottom:0; /* underline expands left to right */
+    }
+    .section2 .about_cfo button:hover a {
+      color: #000;
     }
 
     /* --- End Section2 CSS --- */
@@ -597,10 +593,14 @@ nav .right button:hover a {
         cursor: pointer;
     }
     .section3 .ser_con .left .cfo_service{
-        border: .1rem solid #313131;
+        background-color:#313131;
+    }
+    .section3 .ser_con .left .cfo_service{
+        color:#FFFF;
     }
     .section3 .ser_con .left div:hover{
-        border: .1rem solid #313131;
+        background-color:#313131;
+        color:#FFFF;
     }
     .section3 .ser_con .left .services{
         width:2.3rem;
