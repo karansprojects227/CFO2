@@ -21,6 +21,11 @@ html, body {
     margin: 0;     /* prevent default spacing */
     overflow: hidden; /* disable body scroll */
 }
+body{
+    overflow-x:hidden;
+    overflow-y: auto;  /* scroll only when needed */
+    position: relative;
+}
 .loader{
     position: fixed;
     top:0;
@@ -98,14 +103,6 @@ html, body {
   10% { opacity: 1;  }
   90% { opacity: 1;  }
   100% { opacity: 0; }
-}
-
-main {
-    width: 100%;
-    height: 100%; 
-    overflow-x:hidden;
-    overflow-y: auto;  /* scroll only when needed */
-    position: relative;
 }
 
 /* --- Start Header CSS --- */
@@ -675,7 +672,7 @@ nav .right button:hover a {
 
     .section4{
         width:100%;
-        height:135vh;
+        height:150vh;
         display:flex;
         padding-bottom:2rem;
     }
@@ -712,10 +709,11 @@ nav .right button:hover a {
         border-radius:1rem;
     }
     .section4 .right p{
+        width:90%;
         font-size:.95rem;
         word-spacing:.3rem;
         line-height:1.5rem;
-        padding-bottom:.5rem;
+        padding-bottom:1rem;
     }
     .section4 .right .main_work_box{
         width:100%;
@@ -727,21 +725,23 @@ nav .right button:hover a {
     }
     .section4 .right .main_work_box .box{
         width:100%;
-        height:18%;
+        height:19%;
         display:flex;
     }
     .section4 .right .main_work_box .box:nth-last-child(1){
-        margin-top:.5rem;
+        margin-top:.5vw;
         margin-bottom:.2rem;
     }
     .section4 .right .main_work_box .box:nth-last-child(2){
-        margin-bottom:1rem;
+        margin-bottom:.5rem;
     }
     .section4 .right .main_work_box .box:nth-last-child(3){
-        margin-bottom:1rem;
+        margin-bottom:.5rem;
+    }
+    .section4 .right .main_work_box .box:nth-last-child(4){
+        margin-top:.5rem;
     }
     .section4 .right .main_work_box .box:nth-last-child(5){
-        margin-top:.5rem;
         margin-bottom:1rem;
     }
     .section4 .right .main_work_box .box .icon_box{

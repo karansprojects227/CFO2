@@ -38,6 +38,13 @@
     const dropdown1 = document.querySelector(".dropdown1");
     const dropdown2 = document.querySelector(".dropdown2");
 
+    (function smoothScrolling(){
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('.scroll-container'), // Replace '.scroll-container' with your actual selector
+            smooth: true
+        });
+    })();
+
     (function loaderAnimation(){
         setTimeout(function(){
             loader.style.top = '-100%';
@@ -101,45 +108,47 @@
         });
     })();
 
+    // entry page animation
     (function(){
-      // keep all text in array
-      const texts = [
-          "CFO Services",
-          "Business Strategy and Planning",
-          "Business Process Transformation",
-          "Business Process Optimising",
-          "Business Intelligence Analysis",
-          "Treasury and Fund Raising"
-      ];
+        
+        // keep all text in array
+        const texts = [
+            "CFO Services",
+            "Business Strategy and Planning",
+            "Business Process Transformation",
+            "Business Process Optimising",
+            "Business Intelligence Analysis",
+            "Treasury and Fund Raising"
+        ];
 
-      let index = 0;
+        let index = 0;
+        
+        function showTextGSAP(){
+            // fade out current text
+            gsap.to(changeText, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    // change the text after fade out
+                    changeText.textContent = texts[index];
+                    index = (index + 1) % texts.length;
+                
+                    // fade in new text
+                    gsap.to(changeText, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                }
+            });
+        }
+    
+        // initial text
+        changeText.textContent = texts[index];
+        index++;
 
-      function showTextGSAP(){
-        // fade out current text
-        gsap.to(changeText, {
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => {
-                // change the text after fade out
-                changeText.textContent = texts[index];
-                index = (index + 1) % texts.length;
-            
-                // fade in new text
-                gsap.to(changeText, {
-                    opacity: 1,
-                    duration: 0.5,
-                    ease: "power2.out"
-                });
-            }
-        });
-    }
-    
-    // initial text
-    changeText.textContent = texts[index];
-    index++;
-    
-    // run function every 4 seconds
-    setInterval(showTextGSAP, 4000);
+        // run function every 4 seconds
+        setInterval(showTextGSAP, 4000);
         
     })()
 

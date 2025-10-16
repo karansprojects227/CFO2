@@ -19,6 +19,13 @@
     let small_circles = document.querySelectorAll('.small_circle');
     let big_circle_para = document.querySelector('.big_circle .center_p_box p')
 
+    (function smoothScrolling(){
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('.scroll-container'), // Replace '.scroll-container' with your actual selector
+            smooth: true
+        });
+    })();
+
     function toggleDropdown1(){
 
         // Function to open dropdown
