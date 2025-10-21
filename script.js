@@ -2,6 +2,9 @@
 
     // creating variable **------------
     var loader = document.querySelector('.loader');
+    const btn = document.querySelector('.menu_icon');
+    const drawer = document.querySelector('.side-menu');
+    const closeIcon = document.querySelector('.close_icon')
 
     // nav items
     var cfodropdownbox = document.querySelector(".fst_dropdown_box");
@@ -49,6 +52,37 @@
         setTimeout(function(){
             loader.style.top = '-100%';
         }, 6000)
+    })();
+
+    (function(){
+
+      function openMenu(){
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden','false');
+        overlay.classList.add('show');
+        overlay.setAttribute('aria-hidden','false');
+      }
+
+      function closeMenu(){
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden','true');
+        overlay.classList.remove('show');
+        overlay.setAttribute('aria-hidden','true');
+        btn.focus();
+      }
+
+      btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        if(expanded) closeMenu(); else openMenu();
+      });
+
+      overlay.addEventListener('click', closeMenu);
+      closeIcon.addEventListener('click', closeMenu);
+
     })();
 
     (function toggleDropdown1(){
