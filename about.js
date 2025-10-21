@@ -1,6 +1,9 @@
 // Start Home Scipting **------------
 
     // creating variable **------------
+    const btn = document.querySelector('.menu_icon');
+    const drawer = document.querySelector('.side-menu');
+    const closeIcon = document.querySelector('.close_icon')
 
     // nav items
     let cfodropdownbox = document.querySelector(".fst_dropdown_box");
@@ -19,12 +22,47 @@
     let small_circles = document.querySelectorAll('.small_circle');
     let big_circle_para = document.querySelector('.big_circle .center_p_box p')
 
-    (function smoothScrolling(){
+    function smoothScrolling(){
         const scroll = new LocomotiveScroll({
             el: document.querySelector('.scroll-container'), // Replace '.scroll-container' with your actual selector
             smooth: true
         });
-    })();
+    }
+
+    smoothScrolling();
+
+    function openCloseMenu(){
+
+      function openMenu(){
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden','false');
+        overlay.classList.add('show');
+        overlay.setAttribute('aria-hidden','false');
+      }
+
+      function closeMenu(){
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden','true');
+        overlay.classList.remove('show');
+        overlay.setAttribute('aria-hidden','true');
+        btn.focus();
+      }
+
+      btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        if(expanded) closeMenu(); else openMenu();
+      });
+
+      overlay.addEventListener('click', closeMenu);
+      closeIcon.addEventListener('click', closeMenu);
+
+    }
+
+    openCloseMenu();
 
     function toggleDropdown1(){
 
