@@ -4,7 +4,11 @@
     var loader = document.querySelector('.loader');
     const btn = document.querySelector('.menu_icon');
     const drawer = document.querySelector('.side-menu');
-    const closeIcon = document.querySelector('.close_icon')
+    const closeIcon = document.querySelector('.close_icon');
+    const cfo = document.querySelector('.cfo'); // Replace with your actual selector
+    const business = document.querySelector('.side-menu .business'); // Replace with your actual selector
+    const cfoSubmenu = document.querySelector('.cfosubmenu');
+    const businessSubmenu = document.querySelector('.busiesssubmenu');
 
     // nav items
     var cfodropdownbox = document.querySelector(".fst_dropdown_box");
@@ -53,6 +57,38 @@
             loader.style.top = '-100%';
         }, 6000)
     })();
+
+    function isOpenYaNot() {
+
+        // CFO click
+        cfo.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleSubmenu(cfoSubmenu, cfo , downicon1);
+        });
+
+        // Business click
+        business.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleSubmenu(businessSubmenu, business , downicon2);
+        });
+
+        // Generic toggle function
+        function toggleSubmenu(submenu, button , icon) {
+            const isOpened = button.getAttribute('isOpend') === 'true';
+            if (!isOpened) {
+                submenu.style.display = 'block';
+                button.setAttribute('isOpend', 'true');
+                icon.textContent = 'keyboard_arrow_up';
+            } else {
+                submenu.style.display = 'none';
+                button.setAttribute('isOpend', 'false');
+                icon.textContent = 'keyboard_arrow_down';
+            }
+        }
+    }
+
+    // Call the function to activate submenu toggling
+    isOpenYaNot();
 
     (function(){
 
