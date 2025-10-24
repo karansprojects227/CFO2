@@ -29,6 +29,86 @@ main {
     overflow-y: auto;  /* scroll only when needed */
     position: relative;
 }
+.cfosubmenu{
+    padding-left:.8rem;
+    display:none;
+}
+.businesssubmenu{
+    padding-left:.8rem;
+    display:none;
+}
+.main .menu_icon{
+    position:absolute;
+    display:none;
+    top:1%;
+    right:2%;
+    color:#FFFF;
+    font-size:6.5vw;
+    z-index:9999;
+}
+
+.side-menu{
+    position:fixed;
+    right:0;
+    height:100%;
+    width:200px;
+    background:linear-gradient(180deg,#0b1220, #071226);
+    transform:translateX(100%);
+    transition:transform 300ms cubic-bezier(.2,.9,.3,1);
+    padding:16px;
+    z-index:9999;
+    overflow:auto;
+    box-shadow: 8px 0 24px rgba(2,6,23,0.6);
+}
+.main .close_icon{
+    position:absolute;
+    top:2%;
+    right:5%;
+    color:#FFFF;
+    font-size:6.5vw;
+    z-index:99999;
+}
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+.side-menu a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #FFFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+.side-menu ul li a img{
+    margin-left:40px;
+    width:60px;
+    border-radius:5px;
+}
+/* overlay */
+.overlay{
+  position:fixed;
+  inset:56px 0 0 0;
+  background:rgba(2,6,23,0.6);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 300ms cubic-bezier(.2,.9,.3,1);
+  z-index:45;
+}
+.overlay.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.side-menu.open{transform:translateX(0)}
+.side-menu a:hover{background:rgba(6,182,212,0.06); color:#06b6d4}
+.side-menu a:focus{outline:2px solid rgba(6,182,212,0.18)}
 
 header{
      background-color: #313131;
@@ -523,6 +603,139 @@ nav .right button a:hover::after {
         cursor: pointer;
     }
     /* --- End Footer CSS --- */
+
+    /* --- Responsive design --- */
+
+    /* --- Phone Responsive --- */
+
+    @media (max-width:426px) {
+        header a{
+            justify-content:center;
+            font-size:2.72vw;
+        }
+
+        header span{
+            font-size:2.5vw;
+        }
+        
+        nav{
+            display: none;
+        }
+
+        .main .menu_icon{
+            display:block;
+        }
+
+        .section1 {
+            height:fit-content;
+            flex-direction:column-reverse;
+        }
+
+        .section1 .blog-con {
+            width:90%;
+        }
+
+        .section1 .blog-con .date {
+            font-size:4vw;
+            letter-spacing: .2vw;
+        }
+
+        .section1 .blog-con h2 {
+            font-size: 7vw;
+            line-height:1.1;
+        }
+
+        .section1 .blog-con .sub1 {
+            font-size:4vw;
+            letter-spacing:.02vw;
+            word-spacing:.002vw;
+        }
+
+        .section1 .blog-con ol li {
+            font-size:4vw;
+            letter-spacing: .02vw;
+            word-spacing: .03vw;
+            line-height: 1.4;
+        }
+
+        .section2 {
+            height:fit-content;
+            flex-direction:column;
+        }
+
+        .section2 .card {
+            width:100%;
+            margin-bottom:1rem;
+        }
+
+        .section2 .card .bottom h5 {
+            font-size:6vw;
+        }
+
+        .section2 .card .bottom p{
+            font-size:4vw;
+        }
+
+        footer {
+            height:fit-content;
+        }
+
+        footer .info {
+            flex-direction:column;
+            height:fit-content;
+        }
+
+        footer .info .left ,footer .info .middle, footer .info .right {
+            width:100%;
+            height:fit-content;
+            padding-top: 0;
+        }
+
+        footer .info .left img {
+            margin-block:4vw;
+        }
+
+        footer .info .middle h5 , footer .info .right h5{
+            font-size:7vw;
+            padding-bottom:0;
+        }
+
+        footer .info .middle li {
+            font-size:4vw;
+        }
+
+        footer .info .right .contact_info_box .contact_info_box_right {
+            padding-left:2vw;
+        }
+
+        footer .info .right .contact_info_box .contact_info_box_left .phone_icon {
+            margin-top:100px;
+        }
+
+        footer .manage {
+            flex-direction:column;
+            height:fit-content;
+        }
+
+        footer .manage .left ,footer .manage .right{
+            width:100%;
+            height:fit-content;
+            padding-top: 0;
+        }
+
+        footer .manage .left{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:1rem;
+        }
+
+        footer .manage .right h6 {
+            text-align:center;
+            font-size:5vw;
+            padding-bottom:.5rem;
+        }
+    }
 
 /* --- End Main CSS --- */
 
