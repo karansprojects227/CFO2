@@ -31,7 +31,7 @@ body{
 .main .menu_icon{
     position:absolute;
     display:none;
-    top:2%;
+    top:1%;
     right:2%;
     color:#FFFF;
     font-size:6.5vw;
@@ -959,6 +959,4 @@ nav .right button:hover a {
 
 /* --- End Main CSS --- */
 
-
 /* --- End CSS stlying for home page --- */
-
