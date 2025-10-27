@@ -194,7 +194,7 @@ nav .mid{
     .dropdown_box{
         position:fixed;
         left: 50%;
-        top:20%;
+        top:5%;
         transform:translateX(-50%);
         width:95vw;
         height:58vh;
@@ -377,6 +377,7 @@ nav .right button:hover a {
     height:.15rem;
     background:#313131;
     bottom:20%;
+    border-radius:50%;
 }
 .section1 .about_cfo p{
     word-spacing:.03rem;
@@ -416,6 +417,7 @@ nav .right button:hover a {
     height:.15rem;
     background:#313131;
     bottom:20%;
+    border-radius:50%;
 }
 .section2 .team_box{
     width:100%;
@@ -516,6 +518,7 @@ nav .right button:hover a {
     height:.15rem;
     background:#313131;
     bottom:10%;
+    border-radius:50%;
 }
 .section3 .big_circle{
     width:500px;

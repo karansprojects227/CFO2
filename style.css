@@ -274,7 +274,7 @@ nav .mid{
     .dropdown_box{
         position:fixed;
         left: 50%;
-        top:30%;
+        top:5%;
         transform:translateX(-50%);
         width:95vw;
         height:58vh;
@@ -578,6 +578,7 @@ nav .right button:hover a {
         height:.15rem;
         background:#313131;
         bottom:20%;
+        border-radius:50%;
     }
     .section2 .about_cfo p{
         word-spacing:.3rem;
@@ -647,6 +648,7 @@ nav .right button:hover a {
         bottom:45%;
         left:50%;
         transform:translateX(-50%);
+        border-radius:50%;
     }
     .section3 .ser_con{
         width:100%;
@@ -788,6 +790,7 @@ nav .right button:hover a {
         background:#313131;
         bottom:30%;
         border-radius:1rem;
+        border-radius:50%;
     }
     .section4 .right p{
         width:90%;
@@ -879,7 +882,7 @@ nav .right button:hover a {
       height: 4px;
       background-color: #313131;
       margin: 12px auto 0 auto;
-      border-radius: 2px;
+      border-radius:50%;
     }
     .section5 .container {
       display: flex;

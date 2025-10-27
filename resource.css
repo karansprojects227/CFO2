@@ -196,7 +196,7 @@ nav .mid{
     .dropdown_box{
         position:fixed;
         left: 50%;
-        top:20%;
+        top:10%;
         transform:translateX(-50%);
         width:95vw;
         height:58vh;
@@ -367,6 +367,7 @@ nav .right button:hover a {
     height:.15rem;
     background:#313131;
     bottom:20%;
+    border-radius:50%;
 }
 .section1 .resource_con .left p{
     word-spacing:.03rem;

@@ -22,21 +22,12 @@ html, body {
     overflow: hidden; /* disable body scroll */
 }
 
-main {
-    width: 100%;
-    height: 100%; 
+body{
     overflow-x:hidden;
     overflow-y: auto;  /* scroll only when needed */
     position: relative;
 }
-.cfosubmenu{
-    padding-left:.8rem;
-    display:none;
-}
-.businesssubmenu{
-    padding-left:.8rem;
-    display:none;
-}
+
 .main .menu_icon{
     position:absolute;
     display:none;
@@ -59,6 +50,14 @@ main {
     z-index:9999;
     overflow:auto;
     box-shadow: 8px 0 24px rgba(2,6,23,0.6);
+}
+.cfosubmenu{
+    padding-left:.8rem;
+    display:none;
+}
+.busiesssubmenu{
+    padding-left:.8rem;
+    display:none;
 }
 .main .close_icon{
     position:absolute;
@@ -294,34 +293,40 @@ nav .right{
 }
 nav .right button{
     height:80%;
-    background: #9d0505;
-    color:#ffff;
+    backdrop-filter:blur(10px);
     border:none;
     padding:12px 28px;
     cursor: pointer;
     font-size:16px;
-    border-radius:1rem;
+    border-radius:2rem;
     transition: background 0.3s ease, color 0.3s ease;
+    background-color:#ca0b0b;
     box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+    position: relative;
+    overflow: hidden;
 }
 nav .right button a{
     color:#FFFF;
     position: relative;
+    z-index:2;
 }
-nav .right button a::after {
+nav .right button::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -6%; 
-  width: 0;
-  height: 3px; /* underline thickness */
-  background: linear-gradient(to right, #9d0505, #cccccc); /* gradient underline */
-  transition: width 0.4s ease; 
-  border-radius: 2px; /* smooth rounded underline */
+  bottom:-100%;
+  left:0%; 
+  width:100%;
+  height:100%;
+  border-radius:1rem;
+  background: #FFFF; /* gradient underline */
+  transition:all 0.5s ease;
 }
 
-nav .right button a:hover::after {
-  width: 100%; /* underline expands left to right */
+nav .right button:hover::after {
+    bottom:0;
+}
+nav .right button:hover a {
+    color:#000;
 }
 
 /* --- End Nav CSS --- */
