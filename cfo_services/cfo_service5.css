@@ -22,16 +22,13 @@ html, body {
     overflow: hidden; /* disable body scroll */
 }
 
-main {
-    width: 100%;
-    height: 100%; 
+/* --- Start Header CSS --- */
+
+body{
     overflow-x:hidden;
     overflow-y: auto;  /* scroll only when needed */
     position: relative;
 }
-
-/* --- Start Header CSS --- */
-
 .main .menu_icon{
     position:absolute;
     display:none;
@@ -198,7 +195,7 @@ nav .mid{
     .dropdown_box{
         position:fixed;
         left: 50%;
-        top:20%;
+        top:3.5%;
         transform:translateX(-50%);
         width:95vw;
         height:58vh;
@@ -297,34 +294,40 @@ nav .right{
 }
 nav .right button{
     height:80%;
-    background: #9d0505;
-    color:#ffff;
+    backdrop-filter:blur(10px);
     border:none;
     padding:12px 28px;
     cursor: pointer;
     font-size:16px;
-    border-radius:1rem;
+    border-radius:2rem;
     transition: background 0.3s ease, color 0.3s ease;
+    background-color:#ca0b0b;
     box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+    position: relative;
+    overflow: hidden;
 }
 nav .right button a{
     color:#FFFF;
     position: relative;
+    z-index:2;
 }
-nav .right button a::after {
+nav .right button::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -6%; 
-  width: 0;
-  height: 3px; /* underline thickness */
-  background: linear-gradient(to right, #9d0505, #cccccc); /* gradient underline */
-  transition: width 0.4s ease; 
-  border-radius: 2px; /* smooth rounded underline */
+  bottom:-100%;
+  left:0%; 
+  width:100%;
+  height:100%;
+  border-radius:1rem;
+  background: #FFFF; /* gradient underline */
+  transition:all 0.5s ease;
 }
 
-nav .right button a:hover::after {
-  width: 100%; /* underline expands left to right */
+nav .right button:hover::after {
+    bottom:0;
+}
+nav .right button:hover a {
+    color:#000;
 }
 
 /* --- End Nav CSS --- */
@@ -333,7 +336,7 @@ nav .right button a:hover::after {
 
 .section1{
     width:100%;
-    height:85vh;
+    height:fit-content;
     display: flex;
 }
 .section1 .left{
@@ -370,6 +373,7 @@ nav .right button a:hover::after {
     height:.15rem;
     background:#313131;
     bottom:20%;
+    border-radius:50%;
 }
 .section1 .left p{
     word-spacing:.03rem;
@@ -381,35 +385,41 @@ nav .right button a:hover::after {
     margin-bottom:.6rem;  
 }
 .section1 .left button{
+    position: relative;
     width:fit-content;
-    background: #9d0505;
-    color:#ffff;
+    backdrop-filter:blur(10px);
     border:none;
     padding:12px 28px;
     cursor: pointer;
     font-size:16px;
-    border-radius:.5rem;
+    border-radius:2rem;
     transition: background 0.3s ease, color 0.3s ease;
+    background-color:#ca0b0b;
     box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+    overflow: hidden;
+}
+/* after element for hover animation */
+.section1 .left button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    border-radius: 2rem;
+    transition: height 0.4s ease;
+    z-index: -1; /* keeps it behind the text */
 }
 .section1 .left button a{
     color:#FFFF;
-    position: relative;
 }
-.section1 .left button a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6%; 
-  width: 0;
-  height: 3px; /* underline thickness */
-  background: linear-gradient(to right, #9d0505, #cccccc); /* gradient underline */
-  transition: width 0.4s ease; 
-  border-radius: 2px; /* smooth rounded underline */
+/* hover effect */
+.section1 .left button:hover::after {
+    height: 100%;
 }
-
-.section1 .left button a:hover::after {
-  width: 100%; /* underline expands left to right */
+.section1 .left button:hover a{
+    color:#000;
 }
 .section1 .right{
     width:50%;
@@ -452,7 +462,7 @@ nav .right button a:hover::after {
     bottom:20%;
     left:50%;
     transform:translateX(-50%);
-    border-radius: 2rem;
+    border-radius:50%;
 }
 .section2 p{
     text-align:center;
@@ -553,7 +563,7 @@ nav .right button a:hover::after {
     top:-20%;
     left:50%;
     transform:translateX(-50%);
-    border-radius: 2rem;
+    border-radius:50%;
 }
 .section3 .about_line2{
     position: absolute;
@@ -564,7 +574,7 @@ nav .right button a:hover::after {
     bottom:20%;
     left:50%;
     transform:translateX(-50%);
-    border-radius: 2rem;
+    border-radius:50%;
 }
 .section3 .card_box{
     width:100%;
@@ -656,7 +666,7 @@ nav .right button a:hover::after {
     width:7rem;
     height:.18rem;
     background:#313131;
-    border-radius:2rem;
+    border-radius:50%;
     bottom:10%;
 }
 .section4 .right p{
@@ -711,7 +721,7 @@ nav .right button a:hover::after {
     width:7rem;
     height:.18rem;
     background:#313131;
-    border-radius:2rem;
+    border-radius:50%;
     bottom:10%;
 }
 .section5 .left p{
@@ -725,43 +735,44 @@ nav .right button a:hover::after {
     margin-bottom:.6rem;  
 }
 .section5 .left button{
+    position: relative;
     width:fit-content;
+    backdrop-filter:blur(10px);
     border:none;
-    border:1px solid #9d0505;
     padding:12px 28px;
     cursor: pointer;
-    font-size:14px;
-    background:#fff;
-    border-radius:.5rem;
+    font-size:16px;
+    border-radius:2rem;
     transition: background 0.3s ease, color 0.3s ease;
+    background-color:#ca0b0b;
     box-shadow: 0 3px 8px rgba(10, 37, 64, 0.6);
+    overflow: hidden;
     margin-left:1.8rem;
-    margin-top:1rem;
-}
-.section5 .left button:hover{
-    background: #9d0505;
-}
-.section5 .left button:hover a{
-    color:#FFFF;
-}
-.section5 .left button a{
-    color:#000;
-    position: relative;
-}
-.section5 .left button a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6%; 
-  width: 0;
-  height: 3px; /* underline thickness */
-  background: linear-gradient(to right, #9d0505, #cccccc); /* gradient underline */
-  transition: width 0.4s ease; 
-  border-radius: 2px; /* smooth rounded underline */
+    margin-top:.5rem;
 }
 
-.section5 .left button a:hover::after {
-  width: 100%; /* underline expands left to right */
+/* after element for hover animation */
+.section5 .left button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    border-radius: 2rem;
+    transition: height 0.4s ease;
+    z-index: -1; /* keeps it behind the text */
+}
+.section5 .left button a{
+    color:#FFFF;
+}
+/* hover effect */
+.section5 .left button:hover::after {
+    height: 100%;
+}
+.section5 .left button:hover a{
+    color:#000;
 }
 
 /* --- End Section5 CSS ---  */
@@ -806,6 +817,7 @@ nav .right button a:hover::after {
     height:.15rem;
     background:#313131;
     bottom:20%;
+    border-radius:50%;
 }
 .section6 p{
     width:90%;
@@ -891,9 +903,26 @@ textarea {
     overflow: hidden;
 }
 
+/* after element for hover animation */
+.btn-submit::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    border-radius: 2rem;
+    transition: height 0.4s ease;
+    z-index: -1; /* keeps it behind the text */
+}
+
+/* hover effect */
+.btn-submit:hover::after {
+    height: 100%;
+}
 .btn-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    color:#000;
 }
 
 /* --- End Section6 CSS ---  */
