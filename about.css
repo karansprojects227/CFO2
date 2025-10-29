@@ -1,6 +1,12 @@
 /* --- Start CSS stlying for home page --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --p_text_size:3.6vw;
+  --sub_headings:6.5vw;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -764,11 +770,15 @@ nav .right button:hover a {
         .section1 .about_cfo h2 {
             padding-bottom:2vw;
             margin-bottom:2vw;
-            font-size:8vw;
+            font-size:var(--sub_headings);
+            text-align:center;
         }
 
         .section1 .about_cfo .about_line {
             height: 2px;
+            left:50%;
+            transform:translateX(-50%);
+            border-radius:50%;
             bottom:18%;
         }
 
@@ -776,7 +786,7 @@ nav .right button:hover a {
             word-spacing: .3vw;
             letter-spacing:.2vw;
             line-height:5.2vw;
-            font-size:4vw;
+            font-size:var(--p_text_size);
             padding-bottom:2.5vw;
         }
 
@@ -789,13 +799,13 @@ nav .right button:hover a {
         .section2 h3 {
             padding-bottom:2vw;
             margin-bottom:1.5rem;
-            font-size:8vw;
+            font-size:var(--sub_headings);
         }
 
         .section2 h3::after{
             height: 2px;
             bottom:5%;
-            border-radius:20px;
+            border-radius:50%;
         }
 
         .section2 .team_box {
@@ -839,13 +849,13 @@ nav .right button:hover a {
         .section3 h3 {
             padding-bottom:2vw;
             margin-bottom:1.5rem;
-            font-size:8vw;
+            font-size:var(--sub_headings);
         }
 
         .section3 h3::after{
             height: 2px;
             bottom:5%;
-            border-radius:20px;
+            border-radius:50%;
         }
 
         .section3 .mobile-friendly .works{
@@ -891,7 +901,7 @@ nav .right button:hover a {
         }
 
         .section3 .mobile-friendly .works .work .para p{
-            font-size:4vw;
+            font-size:var(--p_text_size);
             line-height:1.2;
             letter-spacing:.1vw;
             word-spacing:.3vw;
@@ -918,7 +928,7 @@ nav .right button:hover a {
         }
 
         footer .info .middle h5 , footer .info .right h5{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             padding-bottom:0;
         }
 
@@ -956,6 +966,10 @@ nav .right button:hover a {
             text-align:center;
             font-size:5vw;
             padding-bottom:.5rem;
+        }
+
+        footer .info .left p{
+            font-size:var(--p_text_size);
         }
 
     }

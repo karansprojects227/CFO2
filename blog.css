@@ -1,6 +1,12 @@
 /* --- Start CSS stlying for home page --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --p_text_size:3.6vw;
+  --sub_headings:6.5vw;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -632,7 +638,7 @@ nav .right button:hover a {
         }
 
         .section1 .left h3 {
-            font-size:8vw;
+            font-size:var(--sub_headings);
             text-align:center;
             padding-bottom:.5rem;
         }
@@ -653,7 +659,7 @@ nav .right button:hover a {
 
         .section1 .left p {
             line-height: 1.5rem;
-            font-size:4vw;
+            font-size:var(--p_text_size);
             padding-bottom: .5rem;
             text-align: center;
         }
@@ -667,6 +673,14 @@ nav .right button:hover a {
             width:100%;
             height:fit-content;
             margin-bottom:1rem;
+        }
+
+        .section2 .card .bottom h5 {
+            font-size:4.8vw;
+        }
+
+        .section2 .card .bottom p{
+            font-size:var(--p_text_size);
         }
 
         footer {
@@ -689,7 +703,7 @@ nav .right button:hover a {
         }
 
         footer .info .middle h5 , footer .info .right h5{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             padding-bottom:0;
         }
 
@@ -727,6 +741,10 @@ nav .right button:hover a {
             text-align:center;
             font-size:5vw;
             padding-bottom:.5rem;
+        }
+
+        footer .info .left p{
+            font-size:var(--p_text_size);
         }
     }
 
