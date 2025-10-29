@@ -1,6 +1,12 @@
 /* --- Start CSS stlying for home page --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --p_text_size:3.6vw;
+  --sub_headings:6.5vw;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -1115,7 +1121,7 @@ footer .manage .right h6 .span2{
         }
 
         .section1 .left h3{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             text-align:center;
         }
 
@@ -1133,7 +1139,7 @@ footer .manage .right h6 .span2{
 
         .section1 .left p{
             text-align:center;
-            font-size:4vw;
+            font-size:var(--p_text_size);
             margin-bottom:0;
             line-height:1.4;
         }
@@ -1148,7 +1154,7 @@ footer .manage .right h6 .span2{
         }
 
         .section2 h3{
-            font-size:5vw;
+            font-size:var(--sub_headings);
         }
 
         .section2 .about_line{
@@ -1157,8 +1163,16 @@ footer .manage .right h6 .span2{
             border-radius:50%;
         }
 
+        .section2 .card_box .cards .card h4{
+            font-size:5vw;
+        }
+
+        .section2 .card_box .cards .card p{
+            font-size:var(--p_text_size);
+        }
+
         .section2 p{
-            font-size:4vw;
+            font-size:var(--p_text_size);
             margin-bottom:1rem;
         }
 
@@ -1185,7 +1199,7 @@ footer .manage .right h6 .span2{
         }
 
         .section3 h3{
-            font-size:7vw;
+            font-size:var(--sub_headings);
         }
 
         .section3 .about_line1{
@@ -1200,6 +1214,14 @@ footer .manage .right h6 .span2{
             height:2px;
             border-radius:50%;
             bottom:15%;
+        }
+
+        .section3 .card_box .card h5{
+            font-size:5vw;
+        }
+
+        .section3 .card_box .card p{
+            font-size:var(--p_text_size);
         }
 
         .section3 .card_box{
@@ -1235,7 +1257,7 @@ footer .manage .right h6 .span2{
 
         .section4 .right h3{
             text-align:center;
-            font-size:7vw;
+            font-size:var(--sub_headings);
         }
 
         .section4 .right .about_line{
@@ -1247,7 +1269,7 @@ footer .manage .right h6 .span2{
 
         .section4 .right p{
             width:fit-content;
-            font-size:4vw;
+            font-size:var(--p_text_size);
         }
 
         .section5{
@@ -1266,7 +1288,7 @@ footer .manage .right h6 .span2{
         }
 
         .section5 .left h3{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             text-align:center;
         }
 
@@ -1284,7 +1306,7 @@ footer .manage .right h6 .span2{
 
         .section5 .left p{
             width:fit-content;
-            font-size:4vw;
+            font-size:var(--p_text_size);
         }
 
         .section5 .right{
@@ -1308,7 +1330,7 @@ footer .manage .right h6 .span2{
         }
 
         .section6 h3{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             line-height:1.2;
             text-align:center;
         }
@@ -1322,7 +1344,7 @@ footer .manage .right h6 .span2{
         
         .section6 p{
             width:fit-content;
-            font-size:4vw;
+            font-size:var(--p_text_size);
         }
 
         .section6 .right{
@@ -1335,11 +1357,11 @@ footer .manage .right h6 .span2{
         }
 
         .contact-section h2{
-            font-size:10vw;
+            font-size:var(--sub_headings);
         }
 
         .form-group input, .form-group select, .form-group textarea{
-            font-size:4vw;
+            font-size:var(--p_text_size);
         }
 
         .btn-submit{
@@ -1367,7 +1389,7 @@ footer .manage .right h6 .span2{
         }
 
         footer .info .middle h5 , footer .info .right h5{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             padding-bottom:0;
         }
 
@@ -1405,6 +1427,10 @@ footer .manage .right h6 .span2{
             text-align:center;
             font-size:5vw;
             padding-bottom:.5rem;
+        }
+
+        footer .info .left p{
+            font-size:var(--p_text_size);
         }
 
     }
