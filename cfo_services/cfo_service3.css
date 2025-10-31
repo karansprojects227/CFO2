@@ -1122,23 +1122,16 @@ footer .manage .right h6 .span2{
 
         .section1 .left h3{
             font-size:var(--sub_headings);
-            text-align:center;
         }
 
         .section1 .left .about_line{
             height: 2px;
             border-radius:50%;
-            left:50%;
-            transform:translateX(-50%);
             bottom:22%;
         }
 
-        .section1 .left h4{
-            text-align:center;
-        }
-
         .section1 .left p{
-            text-align:center;
+            text-align:justify;
             font-size:var(--p_text_size);
             margin-bottom:0;
             line-height:1.4;
@@ -1154,13 +1147,17 @@ footer .manage .right h6 .span2{
         }
 
         .section2 h3{
+            text-align:left;
             font-size:var(--sub_headings);
+            margin:0 5vw;
         }
 
         .section2 .about_line{
             width:8rem;
             height:2px;
             border-radius:50%;
+            left:0%;
+            transform: translateX(0%);
         }
 
         .section2 .card_box .cards .card h4{
@@ -1169,11 +1166,15 @@ footer .manage .right h6 .span2{
 
         .section2 .card_box .cards .card p{
             font-size:var(--p_text_size);
+            text-align:justify;
+            margin-top:1rem;
         }
 
         .section2 p{
             font-size:var(--p_text_size);
             margin-bottom:1rem;
+            text-align:justify;
+            margin:0 5vw;
         }
 
         .section2 .card_box{
@@ -1222,6 +1223,7 @@ footer .manage .right h6 .span2{
 
         .section3 .card_box .card p{
             font-size:var(--p_text_size);
+            text-align:justify;
         }
 
         .section3 .card_box{

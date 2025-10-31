@@ -1106,10 +1106,6 @@ footer .manage .right h6 .span2{
         .section1 .left {
             width:100%;
             padding:5vw;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
         }
 
         .section1 .left h3{
@@ -1119,13 +1115,11 @@ footer .manage .right h6 .span2{
         .section1 .left .about_line{
             height: 2px;
             border-radius:50%;
-            left:50%;
-            transform:translateX(-50%);
             bottom:28%;
         }
 
         .section1 .left p{
-            text-align:center;
+            text-align:justify;
             font-size:var(--p_text_size);
             margin-bottom:0;
             line-height:1.4;
@@ -1133,6 +1127,8 @@ footer .manage .right h6 .span2{
 
         .section1 .left button{
             margin-top:1rem;
+            padding:.5rem 1rem;
+            font-size:4vw;
         }
 
         .section2{
@@ -1152,19 +1148,16 @@ footer .manage .right h6 .span2{
 
         .section2 .right h3{
             font-size:var(--sub_headings);
-            text-align:center;
         }
 
         .section2 .right .about_line{
             height:2px;
             border-radius:50%;
             bottom:30%;
-            left:50%;
-            transform:translateX(-50%);
         }
 
         .section2 .right p{
-            text-align:center;
+            text-align:justify;
             width:fit-content;
             line-height:1.4;
             font-size:var(--p_text_size);
