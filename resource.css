@@ -816,21 +816,19 @@ footer .manage .right h6 .span2{
             padding-bottom:2vw;
             margin-bottom:2vw;
             font-size:var(--sub_headings);
-            text-align:center;
         }
 
         .section1 .resource_con .left .about_line {
             height: 2px;
             border-radius:50%;
             bottom: 20%;
-            left:50%;
-            transform:translateX(-50%);
         }
 
         .section1 .resource_con .left p {
             line-height: 1.4;
             font-size:var(--p_text_size);
             padding-bottom:0;
+            text-align:justify;
         }
 
         .section1 .resource_con .right{

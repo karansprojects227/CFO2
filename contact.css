@@ -722,7 +722,6 @@ footer .manage .right h6 .span2{
 
         .section1 .left h3 {
             font-size:var(--sub_headings);
-            text-align:center;
             padding-bottom:.5rem;
         }
 
@@ -734,8 +733,6 @@ footer .manage .right h6 .span2{
 
         .section1 .left .about_line {
             height:2px;
-            left:50%;
-            transform:translateX(-50%);
             border-radius:50%;
             bottom:5%;
         }
@@ -804,7 +801,7 @@ footer .manage .right h6 .span2{
         }
 
         footer .info .middle h5 , footer .info .right h5{
-            font-size:7vw;
+            font-size:var(--sub_headings);
             padding-bottom:0;
         }
 
@@ -842,6 +839,10 @@ footer .manage .right h6 .span2{
             text-align:center;
             font-size:5vw;
             padding-bottom:.5rem;
+        }
+
+        footer .info .left p{
+            font-size:var(--p_text_size);
         }
     }
 

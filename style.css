@@ -1165,7 +1165,6 @@ nav .right button:hover a {
         .section1 .left h2{
             font-size:4.68vw;
             line-height:5vw;
-            text-align:center;
         }
 
         .section1 .left p {
@@ -1175,7 +1174,7 @@ nav .right button:hover a {
             font-size:var(--p_text_size);
             padding-bottom:2vw;
             margin-top:1rem;
-            text-align:center;
+            text-align:justify;
         }
 
         .section1 .left .btn_1{
@@ -1184,7 +1183,6 @@ nav .right button:hover a {
 
         .section1 .left .offer{
             padding-bottom:3.5vw;
-            text-align:center;
         }
 
         .section1 .left button{
@@ -1209,7 +1207,6 @@ nav .right button:hover a {
             font-size:var(--sub_headings);
             line-height:4.8vw;
             margin-bottom:0;
-            text-align:center;
         }
 
         .section2 .about_cfo .about_line{
@@ -1226,6 +1223,7 @@ nav .right button:hover a {
             line-height: 4.5vw;
             font-size:var(--p_text_size);
             padding-bottom:5vw;
+            text-align:justify;
         }
 
         .section2 .about_cfo button{
@@ -1297,6 +1295,7 @@ nav .right button:hover a {
             line-height: 4.5vw;
             font-size:var(--p_text_size);
             padding:5vw;
+            text-align:justify;
         }
 
         .section3 .ser_con .right .service_content_con .service_para a {
@@ -1345,6 +1344,7 @@ nav .right button:hover a {
             letter-spacing: .25vw;
             line-height: 4.5vw;
             font-size:3.8vw;
+            text-align:justify;
         }
 
         .section4 .right .main_work_box .box .icon_box {
@@ -1361,6 +1361,7 @@ nav .right button:hover a {
         .section4 .right .box .con_box p {
             font-size:var(--p_text_size);
             line-height:4.8vw;
+            text-align:justify;
         }
 
         .section4 .left img{
@@ -1450,6 +1451,7 @@ nav .right button:hover a {
 
         footer .info .left p{
             font-size:var(--p_text_size);
+            text-align:justify;
         }
 
     }

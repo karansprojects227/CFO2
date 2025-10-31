@@ -771,13 +771,10 @@ nav .right button:hover a {
             padding-bottom:2vw;
             margin-bottom:2vw;
             font-size:var(--sub_headings);
-            text-align:center;
         }
 
         .section1 .about_cfo .about_line {
             height: 2px;
-            left:50%;
-            transform:translateX(-50%);
             border-radius:50%;
             bottom:18%;
         }
@@ -788,6 +785,7 @@ nav .right button:hover a {
             line-height:5.2vw;
             font-size:var(--p_text_size);
             padding-bottom:2.5vw;
+            text-align:justify;
         }
 
         .section1 .cfo_vdo{
@@ -832,6 +830,7 @@ nav .right button:hover a {
             font-size:3.5vw;
             letter-spacing:.02vw;
             padding-bottom:1.5vw;
+            text-align: justify;
         }
 
         .section2 .team_box .sub_team .intro .ri-linkedin-box-fill {

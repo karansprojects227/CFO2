@@ -639,7 +639,6 @@ nav .right button:hover a {
 
         .section1 .left h3 {
             font-size:var(--sub_headings);
-            text-align:center;
             padding-bottom:.5rem;
         }
 
@@ -651,8 +650,6 @@ nav .right button:hover a {
 
         .section1 .left .about_line {
             height:2px;
-            left:50%;
-            transform:translateX(-50%);
             border-radius:50%;
             bottom:15%;
         }
@@ -661,7 +658,7 @@ nav .right button:hover a {
             line-height: 1.5rem;
             font-size:var(--p_text_size);
             padding-bottom: .5rem;
-            text-align: center;
+            text-align:justify;
         }
 
         .section2 {
