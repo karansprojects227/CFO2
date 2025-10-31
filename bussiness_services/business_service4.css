@@ -1039,28 +1039,28 @@ footer .manage .right h6 .span2{
 
         .section1 .left{
             width:100%;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
             padding: 0%;
         }
 
         .section1 .left h3{
-            text-align: center;
             font-size:var(--sub_headings);
+            margin-left:5vw;
         }
 
         .section1 .left .about_line{
             height:2px;
-            left:50%;
-            transform:translateX(-50%);
         }
 
         .section1 .left p{
-            text-align:center;
+            text-align:justify;
             padding:5vw;
             margin-bottom:0;
             font-size:var(--p_text_size);
+        }
+
+        .section1 .left button{
+            font-size:4vw;
+            padding:.8rem 1.5rem;
         }
 
         .section2{
@@ -1086,21 +1086,18 @@ footer .manage .right h6 .span2{
         }
 
         .section2 .right h3{
-            text-align:center;
             font-size:var(--sub_headings);
         }
 
         .section2 .right .about_line{
             height:2px;
-            left:50%;
-            transform:translateX(-50%);
             bottom:15%;
         }
 
         .section2 .right p{
             width:fit-content;
             font-size:var(--p_text_size);
-            text-align:center;
+            text-align:justify;
         }
 
         .section3 h3{
